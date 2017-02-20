@@ -1,0 +1,27 @@
+{
+    "name": "dmPty/scheduling",
+    "description": "An independent scheduling for other Laravel's package.",
+    "license": "MIT",
+    "keywords": [
+        "scheduling",
+        "schedule",
+        "laravel"
+    ],
+    "authors": [
+        {
+            "name": "dmPty",
+            "email": "dmptyy@gmail.com"
+        }
+    ],
+    "require": {
+        "php":">=5.6"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ],
+        "psr-0": {
+            "dmPty\\scheduling": "src/"
+        }
+    }
+}
