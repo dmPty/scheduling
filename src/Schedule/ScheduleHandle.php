@@ -1,6 +1,6 @@
 <?php
 
-namespace dmPty\Scheduling\Schedule;
+namespace dmpty\Scheduling\Schedule;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Contracts\Foundation\Application;
@@ -27,7 +27,7 @@ class ScheduleHandle
 
     public function schedule(Schedule $schedule)
     {
-        $scheduleList = $this->app->make('dmPty\ScheduleList');
+        $scheduleList = $this->app->make('dmpty\ScheduleList');
         foreach ($scheduleList->get() as $class) {
             $instance = new $class($schedule);
             $instance->schedule();

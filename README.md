@@ -9,7 +9,7 @@ Scheduling 允许你在你的 package 中添加 Laravel 任务调度。
 **在项目根目录下运行如下composer命令：**
 
 ```
-composer require dmPty/scheduling:dev-master
+composer require dmpty/scheduling:dev-master
 ```
 
 **注册服务提供者：**
@@ -17,7 +17,7 @@ composer require dmPty/scheduling:dev-master
 在`config/app.php`文件中 providers 数组里加入：
 
 ```
-dmPty\Scheduling\Providers\SchedulingProvider::class,
+dmpty\Scheduling\Providers\SchedulingProvider::class,
 ```
 
 > 注意：请将`SchedulingProvider`在所有使用此包提供的方法定义任务调度的服务提供者之前注册！
@@ -44,7 +44,7 @@ class YourClassName extends Scheduling
 ```php
 public function register()
 {
-    $this->app->make('dmPty\ScheduleList')->add(YourClassName::class);
+    $this->app->make('dmpty\ScheduleList')->add(YourClassName::class);
 }
 ```
 

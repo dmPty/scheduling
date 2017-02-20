@@ -1,9 +1,9 @@
 <?php
 
-namespace dmPty\Scheduling\Providers;
+namespace dmpty\Scheduling\Providers;
 
-use dmPty\Scheduling\Schedule\ScheduleHandle;
-use dmPty\Scheduling\Schedule\ScheduleList;
+use dmpty\Scheduling\Schedule\ScheduleHandle;
+use dmpty\Scheduling\Schedule\ScheduleList;
 use Illuminate\Support\ServiceProvider;
 
 class SchedulingProvider extends ServiceProvider
@@ -17,17 +17,17 @@ class SchedulingProvider extends ServiceProvider
     public function boot()
     {
         if ($this->app->runningInConsole()) {
-            $this->app->make('dmPty\Scheduling\Schedule\ScheduleHandle');
+            $this->app->make('dmpty\Scheduling\Schedule\ScheduleHandle');
         }
     }
 
     public function register()
     {
-        $this->app->singleton('dmPty\Scheduling\Schedule\ScheduleHandle', function ($app) {
+        $this->app->singleton('dmpty\Scheduling\Schedule\ScheduleHandle', function ($app) {
             return new ScheduleHandle($app);
         });
 
-        $this->app->singleton('dmPty\ScheduleList', function () {
+        $this->app->singleton('dmpty\ScheduleList', function () {
             return new ScheduleList();
         });
     }

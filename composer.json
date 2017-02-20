@@ -1,5 +1,5 @@
 {
-    "name": "dmPty/scheduling",
+    "name": "dmpty/scheduling",
     "description": "An independent scheduling for other Laravel's package.",
     "license": "MIT",
     "keywords": [
@@ -9,7 +9,7 @@
     ],
     "authors": [
         {
-            "name": "dmPty",
+            "name": "dmpty",
             "email": "dmptyy@gmail.com"
         }
     ],
@@ -21,7 +21,7 @@
             "src/"
         ],
         "psr-0": {
-            "dmPty\\scheduling": "src/"
+            "dmpty\\scheduling": "src/"
         }
     }
 }

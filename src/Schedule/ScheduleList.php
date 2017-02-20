@@ -1,6 +1,6 @@
 <?php
 
-namespace dmPty\Scheduling\Schedule;
+namespace dmpty\Scheduling\Schedule;
 
 class ScheduleList
 {
