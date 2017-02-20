@@ -9,7 +9,7 @@ Scheduling 允许你在你的 package 中添加 Laravel 任务调度。
 **在项目根目录下运行如下composer命令：**
 
 ```
-composer require element-vip/scheduling:dev-master
+composer require dmPty/scheduling:dev-master
 ```
 
 **注册服务提供者：**
@@ -44,7 +44,7 @@ class YourClassName extends Scheduling
 ```php
 public function register()
 {
-$this->app->make('ElementVip\ScheduleList')->add(YourClassName::class);
+    $this->app->make('ElementVip\ScheduleList')->add(YourClassName::class);
 }
 ```
 
