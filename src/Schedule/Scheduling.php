@@ -1,6 +1,6 @@
 <?php
 
-namespace ElementVip\Scheduling\Schedule;
+namespace dmPty\Scheduling\Schedule;
 
 use Illuminate\Console\Scheduling\Schedule;
 

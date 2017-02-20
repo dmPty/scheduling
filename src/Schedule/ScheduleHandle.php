@@ -1,6 +1,6 @@
 <?php
 
-namespace ElementVip\Scheduling\Schedule;
+namespace dmPty\Scheduling\Schedule;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Contracts\Foundation\Application;
@@ -27,7 +27,7 @@ class ScheduleHandle
 
     public function schedule(Schedule $schedule)
     {
-        $scheduleList = $this->app->make('ElementVip\ScheduleList');
+        $scheduleList = $this->app->make('dmPty\ScheduleList');
         foreach ($scheduleList->get() as $class) {
             $instance = new $class($schedule);
             $instance->schedule();

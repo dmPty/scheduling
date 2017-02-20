@@ -1,9 +1,9 @@
 <?php
 
-namespace ElementVip\Scheduling\Providers;
+namespace dmPty\Scheduling\Providers;
 
-use ElementVip\Scheduling\Schedule\ScheduleHandle;
-use ElementVip\Scheduling\Schedule\ScheduleList;
+use dmPty\Scheduling\Schedule\ScheduleHandle;
+use dmPty\Scheduling\Schedule\ScheduleList;
 use Illuminate\Support\ServiceProvider;
 
 class SchedulingProvider extends ServiceProvider
@@ -17,17 +17,17 @@ class SchedulingProvider extends ServiceProvider
     public function boot()
     {
         if ($this->app->runningInConsole()) {
-            $this->app->make('ElementVip\Scheduling\Schedule\ScheduleHandle');
+            $this->app->make('dmPty\Scheduling\Schedule\ScheduleHandle');
         }
     }
 
     public function register()
     {
-        $this->app->singleton('ElementVip\Scheduling\Schedule\ScheduleHandle', function ($app) {
+        $this->app->singleton('dmPty\Scheduling\Schedule\ScheduleHandle', function ($app) {
             return new ScheduleHandle($app);
         });
 
-        $this->app->singleton('ElementVip\ScheduleList', function () {
+        $this->app->singleton('dmPty\ScheduleList', function () {
             return new ScheduleList();
         });
     }

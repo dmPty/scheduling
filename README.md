@@ -17,7 +17,7 @@ composer require dmPty/scheduling:dev-master
 在`config/app.php`文件中 providers 数组里加入：
 
 ```
-ElementVip\Scheduling\Providers\SchedulingProvider::class,
+dmPty\Scheduling\Providers\SchedulingProvider::class,
 ```
 
 > 注意：请将`SchedulingProvider`在所有使用此包提供的方法定义任务调度的服务提供者之前注册！
@@ -44,7 +44,7 @@ class YourClassName extends Scheduling
 ```php
 public function register()
 {
-    $this->app->make('ElementVip\ScheduleList')->add(YourClassName::class);
+    $this->app->make('dmPty\ScheduleList')->add(YourClassName::class);
 }
 ```
 
